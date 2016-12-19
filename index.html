@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive SVG hexagon list with circle image</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="app xdebug" id="app">
+
+  <section class="hexagons hexagons-1">
+
+    <div class="box" v-for="item in items1" v-on:click="handleClick">
+      <svg class="svg-hexagon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="174" height="200" viewbox="0 0 173.20508075688772 200">
+    
+        <defs>
+     <pattern id="image-bg" x="0" y="0" v-bind:width="imageConfig.width" v-bind:height="imageConfig.height"  patternUnits="userSpaceOnUse">
+       <image v-bind:xlink:href="item.img"></image>
+    </pattern>
+  </defs>
+      
+      <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" xxfill="url('#image-bg')"></path>
+  </svg>
+      <div class="circle" v-bind:style="item.circleStyleObject"> </div>
+      <div class="rect">
+        <div>{{item.name}}</div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="hexagons hexagons-2">
+
+    <div class="box" v-for="item in items2" v-on:click="handleClick">
+      <svg class="svg-hexagon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="174" height="200" viewbox="0 0 173.20508075688772 200">
+    
+        <defs>
+     <pattern id="image-bg" x="0" y="0" v-bind:width="imageConfig.width" v-bind:height="imageConfig.height"  patternUnits="userSpaceOnUse">
+       <image v-bind:xlink:href="item.img"></image>
+    </pattern>
+  </defs>
+      
+      <path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" xxfill="url('#image-bg')"></path>
+  </svg>
+
+      <div class="circle" v-bind:style="item.circleStyleObject"> </div>
+      <div class="rect">
+        <div>{{item.name}}</div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

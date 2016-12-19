@@ -1,0 +1,141 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  background: #222;
+}
+
+.app {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}
+.app > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+.app > header button {
+  font-size: 1rem;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+.app.debug .box .circle {
+  box-shadow: 0 0 0 1px red;
+}
+.app.debug .box .rect {
+  outline: 1px solid;
+}
+.app.debug .box .svg-hexagon {
+  outline: 1px solid red;
+}
+
+.hexagons {
+  font-size: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.hexagons-1 {
+  position: relative;
+  padding-left: 1.73205em;
+  max-width: 20.78461em;
+  max-width: 17.32051em;
+}
+.hexagons-1 .box:nth-of-type(odd) svg {
+  fill: pink;
+}
+.hexagons-1 .box:nth-of-type(even) svg {
+  fill: hotpink;
+}
+.hexagons-2 {
+  position: absolute;
+  top: 3em;
+  max-width: 17.32051em;
+}
+.hexagons-2 .box:nth-of-type(odd) svg {
+  fill: deeppink;
+}
+.hexagons-2 .box:nth-of-type(even) svg {
+  fill: purple;
+}
+
+.box {
+  position: relative;
+  font-size: inherit;
+  width: 3.4641em;
+  height: 4em;
+  margin-bottom: 2em;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.circle {
+  position: absolute;
+  top: 0.26795em;
+  left: 0;
+  width: 3.4641em;
+  height: 3.4641em;
+  border-radius: 50%;
+  background: transparent no-repeat 50% 50% / contain;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.rect {
+  font-size: inherit;
+  width: inherit;
+  height: 2em;
+  top: 1em;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.rect > div {
+  border-radius: 4px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding: .1rem .5rem 0;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 1rem;
+}
+
+.svg-hexagon {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.svg-hexagon pattern {
+  width: 100%;
+  height: 100%;
+}
